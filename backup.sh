@@ -5,7 +5,7 @@ categories=(zsh vim tmux git powerline)
 category=""
 
 # Paths used in restoration process
-dir_target=~
+dir_target=/home/sean
 dir_backup=$(pwd)
 
 # Confirm when restoration overwrites an existing dotfile
@@ -13,7 +13,7 @@ confirm_restore() {
     file="$1"
     path="$2"
 
-    if [[ -f "$path/$file" ]]; then
+    if [[ "$path/$file" ]]; then
         read -e -p "File $file already exists, do you want to overwrite it? [y|n] " overwrite
         if [[ "$overwrite" == "y" ]]; then
             echo "Overwriting $file"
@@ -52,7 +52,11 @@ perform_restore() {
         echo "git dotfiles restored!"
     fi
     if [[ "$1" == "powerline" || "$1" == "all" ]]; then
-        echo "Powerline not yet setup!"
+        dir_target="/home/sean/.local/lib/python3.10/site-packages/powerline"
+        dir_backup="./powerline"
+        confirm_restore "config_files" "$dir_target"
+        cp -r "$dir_backup/config_files" "$dir_target/config_files"
+        echo "Powerline dotfiles restored!"
     fi
 }
 
@@ -88,7 +92,13 @@ perform_backup() {
         fi
     fi
     if [[ "$1" == "powerline" || "$1" == "all" ]]; then
-        echo "Powerline not yet setup!"
+        dir_target="/home/sean/.local/lib/python3.10/site-packages/powerline"
+        dir_backup="./powerline"
+        if [[ "$dir_target/config_files" ]]; then
+            rm -rf "$dir_backup/config_files"
+            cp -r "$dir_target/config_files" "$dir_backup"
+            echo "Backup made of Powerline dotfiles!"
+        fi
     fi
 }
 
