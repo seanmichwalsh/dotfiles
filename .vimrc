@@ -25,6 +25,6 @@ nnoremap <esc>^[ <esc>^[
 syntax on
 
 " Powerline configuration for Vim
-set rtp+=/home/sean/.local/lib/python3.9/site-packages/powerline/bindings/vim
+set rtp+=/home/sean/.local/lib/python3.10/site-packages/powerline/bindings/vim
 set laststatus=2
 set t_Co=256

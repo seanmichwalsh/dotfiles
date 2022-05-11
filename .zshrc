@@ -111,6 +111,7 @@ export EDITOR='vim'
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y && flatpak remove --unused -y && rustup update && omz update"
 alias python="python3"
 alias liveitup="cd ~/Nextcloud/Code/live-it-up"
+alias dotfiles="cd ~/Nextcloud/Code/dotfiles"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
