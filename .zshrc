@@ -108,7 +108,7 @@ export EDITOR='vim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y && flatpak remove --unused -y && rustup update && omz update"
+alias update="sudo dnf update -y && sudo dnf autoremove -y && flatpak update -y && flatpak remove --unused -y && rustup update && omz update"
 alias python="python3"
 alias liveitup="cd ~/Nextcloud/Code/live-it-up"
 alias dotfiles="cd ~/Nextcloud/Code/dotfiles"
