@@ -11,7 +11,7 @@ The script takes the following arguments:
   - vim
   - tmux
   - git
-  - powerline\
+  - powerline
 
 Valid use of the script looks like this:
 ```bash
@@ -24,7 +24,9 @@ Several configuration tools I use must be manually installed. These are listed b
 
 ### oh-my-zsh
 Plugin manager for zsh, install [here](https://ohmyz.sh/#install).\
-Clone plugin `zsh-syntax-highlighting` into `.oh-my-zsh/plugins` from [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
+Clone the following plugins into `.oh-my-zsh/plugins`:
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  - [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
 
 ### powerlevel10k
 zsh theme configuration tool, install [here](https://github.com/romkatv/powerlevel10k#oh-my-zsh=).\
@@ -32,4 +34,13 @@ Install and configure Meslo terminal fonts from [here](https://github.com/romkat
 
 ### Powerline
 Terminal + vim status bar, install [here](https://powerline.readthedocs.io/en/master/installation/linux.html).\
-Note: Powerline configuration is source from `.tmux.conf`, not `.zshrc` in my setup
+Note: Powerline configuration is sourced from `.tmux.conf`, not `.zshrc` in my setup
+
+### CLI Tools
+- [exa](https://the.exa.website/) - `ls` replacement
+- [bat](https://github.com/sharkdp/bat) - `cat` replacement
+- [delta](https://github.com/dandavison/delta) - Improved git diffs
+- [ripgrep](https://blog.burntsushi.net/ripgrep/) - `grep` replacement
+- [fd](https://github.com/sharkdp/fd) - `find` replacement
+- [fzf](https://github.com/junegunn/fzf) - Fuzzy finder
+
