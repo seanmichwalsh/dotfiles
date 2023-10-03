@@ -49,8 +49,8 @@ alias python="python3"
 # CLI tool aliases
 alias ls="exa"
 alias cat="bat"
-alias grep="rg"
-alias find="fd"
+alias rg="rg --hidden"
+alias fd="fd --hidden"
 
 # Source p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
